@@ -15,9 +15,7 @@ export default function NewsScreen() {
   const apiKey = "pub_50424750c1e629c56c2cbdfafef4c0a8e104e";
 
   useEffect(() => {
-    fetch(
-      `https://newsdata.io/api/1/news?apikey=${apiKey}&q=crypto&language=es&image=1&size=10`
-    )
+    fetch(`https://newsdata.io/api/1/news?apikey=${apiKey}&q=crypto`)
       .then((response) => response.json())
       .then((data) => setNews(data.results))
       .catch((error) => console.error(error));
